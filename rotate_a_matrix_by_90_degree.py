@@ -1,4 +1,5 @@
 # 2차원 리스트 90도 회전하기
+# 오른쪽
 def rotate_a_matrix_by_90_degree(a):
     n = len(a) # 행 길이 계산
     m = len(a[0]) # 열 길이 계산
@@ -6,4 +7,15 @@ def rotate_a_matrix_by_90_degree(a):
     for i in range(n):
         for j in range(m):
             result[j][n - i - 1] = a[i][j]
+    return result
+
+
+# 왼쪽
+def rotate_a_matrix_by_90_degree_reverse(a):
+    n = len(a) # 행 길이 계산
+    m = len(a[0]) # 열 길이 계산
+    result = [[0] * n for _ in range(m)] # 결과 리스트
+    for i in range(n):
+        for j in range(m):
+            result[m - j - 1][i] = a[i][j]
     return result
