@@ -10,3 +10,5 @@ for i in range(2, int(math.sqrt(n)) + 1):
 
 primes = [i for i in range(2, n + 1) if is_prime[i]]
 print(primes)
+
+# O(log(logn))
